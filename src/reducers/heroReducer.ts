@@ -1,3 +1,4 @@
+import { HeroFav } from '../types/HeroTypes'
 import { ActionTypes, StateTypes } from '../types/ReducerTypes'
 
 // const obj: HeroFav = { 1: { id: 1, name: 'diego', image: '', description: '' } }
@@ -17,11 +18,18 @@ export function heroReducer (state: StateTypes, action: ActionTypes):StateTypes 
           }
         }
       }
-    case 'delFavorite':
+    case 'delFavorite':{
+      const result: HeroFav = {}
+      for (const key in state.favorites) {
+        if (parseInt(key) !== action.id) {
+          result[key] = state.favorites[key]
+        }
+      }
       return {
         ...state,
-        favorites: Object.entries(state.favorites).filter((fav) => fav[0] !== action.id)
+        favorites: result
       }
+    }
     case 'addHeroes':
       return {
         ...state,

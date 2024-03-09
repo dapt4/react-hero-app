@@ -1,0 +1,24 @@
+:root {
+  --colors-black: #000;
+  --colors-white: #fff;
+  --breakpoints-xs: 0;
+  --breakpoints-sm: 576px;
+  --breakpoints-md: 768px;
+  --breakpoints-lg: 992px;
+  --breakpoints-xl: 1200px;
+  --breakpoints-xxl: 1400px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight: 400, 500, 700;
+  font-display: swap;
+  src: url(./assets/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+}

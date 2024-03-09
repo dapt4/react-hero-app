@@ -1,0 +1,38 @@
+.main {
+  padding-top: 48px;
+  .search {
+    display: block;
+    width: 100%;
+    padding: 12px 48px;
+    font-family: roboto;
+    font-weight: 400;
+    &__box {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid var(--colors-black);
+      padding-bottom: 8px;
+      gap: 10px;
+      .label {
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
+    }
+    &__count{
+      font-size: 12px;
+    }
+  }
+  .heroes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
