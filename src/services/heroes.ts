@@ -16,6 +16,6 @@ export const findHeroes = async (name: string) => {
       image: hero.thumbnail.path?.concat('.' + hero.thumbnail.extension)
     }))
   } catch (error) {
-    console.error('Hubo un error de solicitud')
+    console.error('There is a request error')
   }
 }

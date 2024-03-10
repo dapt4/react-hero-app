@@ -3,7 +3,10 @@
   justify-content: center;
   .comics {
     display: flex;
-    width: 960px;
+    width: 100%;
+    @media (min-width: 960px) {
+      width: 960px;
+    }
     flex-direction: column;
     padding: 48px 0px;
     gap: 24px;
@@ -13,6 +16,10 @@
       height: 38px;
       font-size: 32px;
       font-weight: 700;
+      padding: 0px 16px;
+      @media (min-width: 834px) {
+        padding: 0px 48px;
+      }
     }
     &__list {
       display: flex;
@@ -21,6 +28,10 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 16px;
+      padding: 0px 16px 0px 16px;
+      @media (min-width: 834px) {
+        padding: 0px 48px;
+      }
     }
     &__item {
       width: 179.2px;
@@ -44,16 +55,15 @@
   }
 }
 
-
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--colors-gray); 
+  background: var(--colors-gray);
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: var(--colors-red); 
+  background: var(--colors-red);
 }

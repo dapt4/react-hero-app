@@ -1,22 +1,13 @@
-import { useContext } from 'react'
-import { HeroContext } from '../contexts/hero'
 import cardImage from '../assets/card.png'
 import heartEmpty from '../assets/heartEmpty.svg'
 import heartFull from '../assets/heartFull.svg'
-import { HeroTypes } from '../types/HeroTypes'
-import '../styles/HeroCard.scss'
-import { ActionTypes } from '../types/ReducerTypes'
+import '../styles/HeroCards.scss'
 import { Link } from 'react-router-dom'
+import useFavorite from '../hooks/useFavorite'
 
 export default function HeroCards () {
-  const { hero, dispatch } = useContext(HeroContext)
+  const { hero, setFavorite } = useFavorite()
   const data = hero.favMode ? Object.values(hero.favorites) : hero.heroes
-  const favoriteHandler = (hro: HeroTypes) => {
-    const message: ActionTypes = hero.favorites[hro.id]
-      ? { type: 'delFavorite', id: hro.id }
-      : { type: 'addFavorite', favorite: hro }
-    dispatch(message)
-  }
   return (
     <>
       {
@@ -27,7 +18,7 @@ export default function HeroCards () {
               <img className='imgfooter' src={cardImage} alt='hero card' />
               <span className='name'>{hro.name}</span>
             </Link>
-            <button onClick={() => favoriteHandler(hro)} className='heroCard__fav'>
+            <button onClick={() => setFavorite(hro)} className='heroCard__fav'>
               <img src={hero.favorites[hro.id] ? heartFull : heartEmpty} alt='favorite button' />
             </button>
           </div>

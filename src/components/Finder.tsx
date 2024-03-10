@@ -1,18 +1,10 @@
-import { ChangeEvent, useContext, useId, useState } from 'react'
+import { useId } from 'react'
 import searchIcon from '../assets/search.png'
-import { HeroContext } from '../contexts/hero'
-import { findHeroes } from '../services/heroes'
+import useFind from '../hooks/useFind'
 
 export default function Finder () {
-  const { dispatch } = useContext(HeroContext)
+  const { value, findHandler } = useFind()
   const inputId = useId()
-  const [value, setValue] = useState('')
-  const changeHandler = async (event: ChangeEvent<HTMLInputElement>) => {
-    const text = event.target.value
-    setValue(text)
-    const heroes = await findHeroes(text)
-    dispatch({ type: 'addHeroes', heroes })
-  }
   return (
     <>
       <label className='label' htmlFor={inputId}>
@@ -23,7 +15,7 @@ export default function Finder () {
         className='input'
         type='text'
         placeholder='SEARCH A CHARACTER...'
-        onChange={changeHandler}
+        onChange={findHandler}
         value={value}
       />
     </>

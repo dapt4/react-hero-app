@@ -1,19 +1,11 @@
-import { useContext } from 'react'
-import { Outlet, Link, useNavigate } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import './styles/Layout.scss'
 import logo from './assets/logo.png'
 import heart from './assets/heartFull.svg'
-import { HeroContext } from './contexts/hero'
+import useLayout from './hooks/useLayout'
 
 export default function Layout () {
-  const { hero, dispatch } = useContext(HeroContext)
-  const count = Object.entries(hero.favorites).length
-  const navigate = useNavigate()
-  const noFavHandler = () => dispatch({ type: 'favMode', value: false })
-  const favHandler = () => {
-    dispatch({ type: 'favMode', value: !hero.favMode })
-    navigate('/')
-  }
+  const { count, favHandler, noFavHandler } = useLayout()
   return (
     <>
       <header className='navbar'>

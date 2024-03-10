@@ -3,12 +3,6 @@
   --colors-white: #fff;
   --colors-red: #EC1D24;
   --colors-gray: #ccc;
-  --breakpoints-xs: 0;
-  --breakpoints-sm: 576px;
-  --breakpoints-md: 768px;
-  --breakpoints-lg: 992px;
-  --breakpoints-xl: 1200px;
-  --breakpoints-xxl: 1400px;
 }
 
 * {
@@ -25,3 +19,5 @@
   font-display: swap;
   src: url(./assets/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
 }
+
+

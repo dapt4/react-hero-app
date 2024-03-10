@@ -4,6 +4,10 @@
   height: 245.97px;
   flex-direction: column;
   position: relative;
+  @media (min-width: 393px) {
+    width: 172.5px;
+    height: 245.97px;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,16 +16,24 @@
       height: 189.97px;
       object-fit: cover;
       object-position: left center;
+      @media (min-width: 393px) {
+        width: 172.5px;
+        height: 189.97px;
+      }
     }
     .imgfooter {
       width: 188.57px;
       height: 56px;
+      @media (min-width: 393px) {
+        width: 172.5px;
+        height: 56px;
+      }
     }
     .name {
       position: absolute;
       bottom: 18px;
       left: 15px;
-      width: 140px;
+      width: 125px;
       font-weight: 400;
       font-size: 14px;
       color: var(--colors-white);
