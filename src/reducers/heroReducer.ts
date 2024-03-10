@@ -1,8 +1,6 @@
 import { HeroFav } from '../types/HeroTypes'
 import { ActionTypes, StateTypes } from '../types/ReducerTypes'
 
-// const obj: HeroFav = { 1: { id: 1, name: 'diego', image: '', description: '' } }
-
 export function heroReducer (state: StateTypes, action: ActionTypes):StateTypes {
   switch (action.type) {
     case 'addFavorite':
@@ -36,6 +34,11 @@ export function heroReducer (state: StateTypes, action: ActionTypes):StateTypes 
         heroes: [
           ...action.heroes
         ]
+      }
+    case 'favMode':
+      return {
+        ...state,
+        favMode: action.value
       }
     default:
       return state

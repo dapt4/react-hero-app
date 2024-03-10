@@ -9,7 +9,7 @@ interface PropsType {
   children: ReactNode
 }
 
-const INITIAL_STATE: StateTypes = { heroes: [], favorites: { } }
+const INITIAL_STATE: StateTypes = { heroes: [], favorites: { }, favMode: false }
 
 export function HeroProvider ({ children }: PropsType) {
   const [hero, dispatch] = useReducer(heroReducer, INITIAL_STATE)

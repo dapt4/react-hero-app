@@ -1,0 +1,47 @@
+.heroCard {
+  display: flex;
+  width: 188.57px;
+  height: 245.97px;
+  flex-direction: column;
+  position: relative;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    .image {
+      width: 188.57px;
+      height: 189.97px;
+      object-fit: cover;
+      object-position: left center;
+    }
+    .imgfooter {
+      width: 188.57px;
+      height: 56px;
+    }
+    .name {
+      position: absolute;
+      bottom: 18px;
+      left: 15px;
+      width: 140px;
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--colors-white);
+      overflow: hidden;
+      text-wrap: nowrap;
+    }
+  }
+  &__fav {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+    outline: none;
+    img {
+      width: 12px;
+      height: 10.84px;
+    }
+  }
+}

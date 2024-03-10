@@ -1,6 +1,8 @@
 :root {
   --colors-black: #000;
   --colors-white: #fff;
+  --colors-red: #EC1D24;
+  --colors-gray: #ccc;
   --breakpoints-xs: 0;
   --breakpoints-sm: 576px;
   --breakpoints-md: 768px;
@@ -13,6 +15,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: roboto;
 }
 
 @font-face {
