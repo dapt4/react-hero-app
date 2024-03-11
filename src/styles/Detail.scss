@@ -1,0 +1,16 @@
+.detailview {
+  animation-name: downOpacity;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes downOpacity {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

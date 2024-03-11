@@ -8,6 +8,19 @@
     width: 172.5px;
     height: 245.97px;
   }
+  &:hover{
+    .imgfooter{
+      height: 0px;
+    }
+    .redCard{
+      height: 56px;
+    }
+    .heroCard__fav{
+      img{
+        filter: brightness(900%);
+      }
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -21,13 +34,25 @@
         height: 189.97px;
       }
     }
+    .redCard{
+      background-color: var(--colors-red);
+      height: 0px;
+      transition: height ease 0.5s;
+    }
     .imgfooter {
       width: 188.57px;
       height: 56px;
+      transition: height ease 0.5s;
       @media (min-width: 393px) {
         width: 172.5px;
-        height: 56px;
       }
+    }
+    .imgCut{
+      position: absolute;
+      width: 12.86px;
+      height: 12.86px;
+      bottom: 0px;
+      right: 0px;
     }
     .name {
       position: absolute;
@@ -57,3 +82,5 @@
     }
   }
 }
+
+

@@ -12,13 +12,13 @@ export default function Main () {
           <span className='favorites__title'>FAVORITES</span>
         </section>
       )}
-      <section className='search'>
+      <section className={`search ${hero.favMode ? 'down' : 'up'}`}>
         <div className='search__box'>
           <Finder />
         </div>
         <span className='search__count'>{count} RESULTS</span>
       </section>
-      <section className='heroes'>
+      <section className={`heroes ${hero.favMode ? 'down' : 'up'}`}>
         <div className='heroes__box'>
           <HeroCards />
         </div>

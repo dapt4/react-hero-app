@@ -15,17 +15,17 @@
     height: 38px;
     padding: 0px 48px;
     &__title {
-      font-size: 32px;
       font-weight: 700;
     }
     @media (min-width: 393px) {
       padding: 0px 16px;
-      .favorites__title{
+      .favorites__title {
         font-size: 24px;
       }
     }
     @media (min-width: 834px) {
       padding: 0px 48px;
+      font-size: 32px;
     }
   }
   .search {
@@ -33,6 +33,14 @@
     width: 100%;
     padding: 12px 48px;
     font-weight: 400;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    &.down {
+      animation-name: down;
+    }
+    &.up{
+      animation-name: up;
+    }
     @media (min-width: 393px) {
       padding: 12px 16px;
     }
@@ -65,6 +73,14 @@
   .heroes {
     display: block;
     width: 100%;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    &.down {
+      animation-name: down;
+    }
+    &.up{
+      animation-name: up;
+    }
     &__box {
       display: flex;
       align-items: center;
@@ -81,5 +97,23 @@
         padding: 0px 48px;
       }
     }
+  }
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
   }
 }
