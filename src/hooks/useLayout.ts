@@ -8,7 +8,7 @@ export default function useLayout () {
   const navigate = useNavigate()
   const noFavHandler = () => dispatch({ type: 'favMode', value: false })
   const favHandler = () => {
-    dispatch({ type: 'favMode', value: !hero.favMode })
+    dispatch({ type: 'favMode', value: true })
     navigate('/')
   }
   return { favHandler, noFavHandler, count }
