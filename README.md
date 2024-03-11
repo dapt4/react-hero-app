@@ -27,3 +27,7 @@ VITE_API_PRIVATE_KEY='<tu private key>'`
 
 El proyecto está construido con arquitectura "File Type" donde los archivos
 estan situados en carpetas nombradas con su tipo.
+
+## desplegado en:
+
+https://astonishing-naiad-95d8b4.netlify.app/
